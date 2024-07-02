@@ -1,0 +1,24 @@
+.body{
+    background-color: black;
+}
+
+.common_header{
+    height: 46px;
+    width: 1260px;
+    margin: auto;
+    background-color: black;
+
+}
+.header_container{
+    height: 46px;
+    width: 1240px;
+
+}
+
+.div_logo{
+    background-image: url('../综合案例素材/images/logo.png');
+    height: 108px;
+    width: 34px;
+    margin-right: 22px;
+}
+

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "jHLIkIVGMy/wmbHN0yMgrtw5xUJ0YRwCvTs98elkXKEtdaAJNf9Ctc6Ddcqt4CqrFHqn/YIQpUhmTToV2tpw9Q==",
+  "success": true,
+  "projectFilePath": "D:\\VSCode\\Project\\C#\\LearnDotNetCore\\LearnDotNetCore.csproj",
+  "expectedPackageFiles": [
+    "D:\\Visual Studio\\Nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.0-preview.3.24172.9\\microsoft.extensions.dependencyinjection.9.0.0-preview.3.24172.9.nupkg.sha512",
+    "D:\\Visual Studio\\Nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.0-preview.3.24172.9\\microsoft.extensions.dependencyinjection.abstractions.9.0.0-preview.3.24172.9.nupkg.sha512"
+  ],
+  "logs": []
+}

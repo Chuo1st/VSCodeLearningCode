@@ -1,0 +1,12 @@
+
+{
+    "DataBaseType":"sqlite",
+    
+    "ConnectionString":"asdfadfs",
+
+    "DataBaseInfo":{
+        "Code":123,
+        "Desc":"mysql connetion string"
+    }
+}
+

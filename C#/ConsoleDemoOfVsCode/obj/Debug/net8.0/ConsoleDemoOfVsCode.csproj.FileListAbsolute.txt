@@ -1,0 +1,14 @@
+D:\VSCode\Project\C#\ConsoleDemoOfVsCode\bin\Debug\net8.0\ConsoleDemoOfVsCode.exe
+D:\VSCode\Project\C#\ConsoleDemoOfVsCode\bin\Debug\net8.0\ConsoleDemoOfVsCode.deps.json
+D:\VSCode\Project\C#\ConsoleDemoOfVsCode\bin\Debug\net8.0\ConsoleDemoOfVsCode.runtimeconfig.json
+D:\VSCode\Project\C#\ConsoleDemoOfVsCode\bin\Debug\net8.0\ConsoleDemoOfVsCode.dll
+D:\VSCode\Project\C#\ConsoleDemoOfVsCode\bin\Debug\net8.0\ConsoleDemoOfVsCode.pdb
+D:\VSCode\Project\C#\ConsoleDemoOfVsCode\obj\Debug\net8.0\ConsoleDemoOfVsCode.GeneratedMSBuildEditorConfig.editorconfig
+D:\VSCode\Project\C#\ConsoleDemoOfVsCode\obj\Debug\net8.0\ConsoleDemoOfVsCode.AssemblyInfoInputs.cache
+D:\VSCode\Project\C#\ConsoleDemoOfVsCode\obj\Debug\net8.0\ConsoleDemoOfVsCode.AssemblyInfo.cs
+D:\VSCode\Project\C#\ConsoleDemoOfVsCode\obj\Debug\net8.0\ConsoleDemoOfVsCode.csproj.CoreCompileInputs.cache
+D:\VSCode\Project\C#\ConsoleDemoOfVsCode\obj\Debug\net8.0\ConsoleDemoOfVsCode.dll
+D:\VSCode\Project\C#\ConsoleDemoOfVsCode\obj\Debug\net8.0\refint\ConsoleDemoOfVsCode.dll
+D:\VSCode\Project\C#\ConsoleDemoOfVsCode\obj\Debug\net8.0\ConsoleDemoOfVsCode.pdb
+D:\VSCode\Project\C#\ConsoleDemoOfVsCode\obj\Debug\net8.0\ConsoleDemoOfVsCode.genruntimeconfig.cache
+D:\VSCode\Project\C#\ConsoleDemoOfVsCode\obj\Debug\net8.0\ref\ConsoleDemoOfVsCode.dll

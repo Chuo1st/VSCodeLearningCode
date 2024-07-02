@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 15px;
+        }
+        .wrapper{
+            margin: 38px;
+        }
+        .input_div{
+            width: 168px;
+            height: 68px;
+            display: inline-block;
+        }
+        .input_div p{
+            margin-bottom: 5px;
+        }
+        .searchButton{
+            height: 38px;
+            width: 68px;
+            display: block;
+            background-color: cornflowerblue;
+            color: aliceblue;
+        }
+        .city{
+
+        }
+        .province{
+
+        }
+        .blockList{}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="input_div">
+            <p>省份名字</p>
+            <input type="text" class="province">
+        </div>    
+        <div class="input_div" style="margin-left: 28px;">
+            <p>城市名字</p>
+            <input type="text" class="city">
+        </div>
+        <div>
+            <input type="button" class="searchButton" value="查询">
+            <div class="input_div">
+                <p>地区列表：</p>
+                <ul class="blockList">
+                    
+                </ul>
+            </div>
+        </div>    
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const province = document.querySelector('.province')
+        const city = document.querySelector('.city')
+        const searchBtn = document.querySelector('.searchButton')
+        searchBtn.addEventListener('click', ()=>{
+            const cityName = city.value
+            const provinceName = province.value
+            axios({url:"http://hmajax.itheima.net/api/areas", params:{pname:provinceName, cname:cityName}}).then(res => {
+                console.log(res)
+                const ul = document.querySelector(".blockList")
+                let str = res.data.list.map(block => `<li>${block}</li>`).join('')
+                ul.innerHTML = str
+            })
+        })
+    </script>
+</body>
+</html>

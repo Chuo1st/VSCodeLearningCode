@@ -17,8 +17,8 @@
             console.log(e.target.files)
             // 把选择的图片和FormData实例绑定
             const file = new FormData()
-            file.append('png', e.target.files[0])
-            axios({url:'http://ajax-api.itheima.net/api/file', method:'post', data:file}).then((result) => {
+            file.append('img', e.target.files[0]) // 这里的img是接口要求的，如果接口要求是pic，那就写"pic"
+            axios({url:'https://hmajax.itheima.net/api/uploadimg', method:'post', data:file}).then((result) => {
                 console.log(result)
             }).catch((err) => {
                 alert(err)

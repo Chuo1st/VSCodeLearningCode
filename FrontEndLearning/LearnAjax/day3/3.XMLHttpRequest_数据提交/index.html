@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XMLHttpRequest_数据提交</title>
+</head>
+
+<body>
+  <button class="reg-btn">注册用户</button>
+  <script>
+    const xhr = new XMLHttpRequest()
+    xhr.open('POST', 'https://hmajax.itheima.net/api/register')
+    xhr.addEventListener('loadend', ()=>{
+      console.log(xhr.response)
+    })
+    xhr.setRequestHeader('Content-type', 'application/json')
+    const regBtn = document.querySelector('.reg-btn')
+    regBtn.addEventListener('click', ()=>{
+      const user = {username:'chuo8888', password:'222981006'}
+      xhr.send(JSON.stringify(user))
+    })
+  </script>
+</body>
+
+</html>

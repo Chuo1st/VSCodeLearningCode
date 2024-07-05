@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function myaxios(config)
+        {
+            const p = new Promise((resolve, reject) => {
+                const xhr = new XMLHttpRequest()
+                if (config.params)
+                {
+                    // 使用URLSearchParams函数获取查询参数
+                    const paramObject = new URLSearchParams(config.params)
+                    const queryString = paramObject.toString()
+                    config.url += `?${queryString}`
+                }
+                xhr.open(config.method || 'get', config.url)
+                xhr.addEventListener('loadend', () => {
+                    if (xhr.status >= 200 && xhr.status < 300)
+                    {
+                        resolve(JSON.parse(xhr.response).list)
+                    }
+                    else
+                    {
+                        reject(new Error(JSON.parse(xhr.response)))
+                    }
+                })
+                xhr.send()
+            })
+            return p
+        }
+
+        //myaxios({url:'https://hmajax.itheima.net/api/province'}).then(res => console.log(res)).catch(err => console.log(err))
+        myaxios({url:'https://hmajax.itheima.net/api/area', params:{pname:'辽宁省', cname:'大连市'}}).then(res => console.log(res)).catch(err => console.log(err))
+    </script>
+</body>
+</html>

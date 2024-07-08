@@ -20,9 +20,9 @@ console.log(citys)
 
 // 为输入框添加输入事件
 const searchInput = document.querySelector('.search-city')
+const searchList = document.querySelector('.search-list')
 searchInput.addEventListener('input', (e) => {
   // 判断当前搜索框是否有输入字符，没有内容无需渲染下拉框
-  const searchList = document.querySelector('.search-list')
   if (e.target.value.length > 0)
   {
     // 通过判断输入的内容，用正则表达式筛选数组中的城市，然后把城市渲染到searchList中
@@ -34,6 +34,7 @@ searchInput.addEventListener('input', (e) => {
   }
 })
 
+// 渲染下拉框
 function renderSearchList(searchListDom, cityNames, reg)
 {
   let newHTML = ''
@@ -47,3 +48,14 @@ function renderSearchList(searchListDom, cityNames, reg)
   searchListDom.innerHTML = newHTML
   console.log(newHTML)
 }
+
+// 2.下拉框的点击事件：通过点击查询结果，然后向服务端获取城市的天气讯息，并渲染整个页面
+searchList.addEventListener('click', e => {
+  if (e.target.tagName === 'LI')
+  {
+    // 获取对应城市的城市信息，应为请求天气数据的借口需要使用城市的id
+    const weatherCast = GetWeatherInfo(e.target.textContent)
+    searchList.style.display = 'none'
+    renderWeatherCast(weatherCast)
+  }
+})

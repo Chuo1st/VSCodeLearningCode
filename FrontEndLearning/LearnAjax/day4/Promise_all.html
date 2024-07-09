@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        // Promise.all
+        const bjPromise = axios({url:'https://hmajax.itheima.net/api/weather', params:{city:'110100'}})
+        const shPromise = axios({url:'https://hmajax.itheima.net/api/weather', params:{city:'310100'}})
+        const gzPromise = axios({url:'https://hmajax.itheima.net/api/weather', params:{city:'440100'}})
+        const szPromise = axios({url:'https://hmajax.itheima.net/api/weather', params:{city:'440300'}})
+
+        Promise.all([bjPromise, shPromise, gzPromise, szPromise]).then(res => {
+            // 结果数组和合并顺序是一致的
+            console.log(res)
+        }).catch(err => {
+            console.dir(err)
+        })
+    </script>
+</body>
+</html>
